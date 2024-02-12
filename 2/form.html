@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="form" lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи</title>
   <base href="https://htmlacademy-adaptive.github.io/2456423-cat-energy-1/2/">
 </head>
-<body class="form__body">
+<body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo" href="index.html">
       <img class="logo__image logo-image" src="img/logo-mobile.svg" height="38" width="33" alt="Надпись Кот Энерджи.">
@@ -28,12 +28,12 @@
       </ul>
     </nav>
   </header>
-  <main class="main-form">
-    <div class="main-form__container">
-      <h1 class="main-form__title">Подбор программы</h1>
-      <p class="main-title title">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      <form class="main-form__selection-form" action="https://echo.htmlacademy.ru" method="get" name="selector">
-        <fieldset class="main-form__personality form form--primary">
+  <main class="main-page">
+    <div class="main-page__container">
+      <h1 class="main-page__title">Подбор программы</h1>
+      <p class="main-page__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="main-page__selection-form form" action="https://echo.htmlacademy.ru" method="get" name="selector">
+        <fieldset class="form__fieldset">
           <legend class="form__legend"><span class="visually-hidden">Ввод персональных данных</span></legend>
           <label class="form__label">
             <span class="form__label-text">ИМЯ:*</span>
@@ -48,7 +48,7 @@
             <input class="form__input" type="number" name="age" placeholder="7">
           </label>
         </fieldset>
-        <fieldset class="main-form__programm form form--secondary">
+        <fieldset class="form__fieldset">
           <legend class="form__legend"><span class="visually-hidden">Выбор программы</span></legend>
           <label class="form__label">
             <input class="form__input" type="radio" name="programm" value="1" checked>
@@ -63,7 +63,7 @@
             <span class="form__label-text">НЕ ЗНАЮ(НУЖЕН ВАШ СОВЕТ)</span>
           </label>
         </fieldset>
-        <fieldset class="main-form__contacts form form--primary">
+        <fieldset class="form__fieldset">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
           <label class="form__label">
             <span class="form__label-text">EMAIL:* </span>
@@ -74,11 +74,11 @@
             <input class="form__input" type="tel" name="tel" placeholder="8(960)900-60-90" required>
           </label>
         </fieldset>
-        <fieldset class="main-form__comment form form--primary">
+        <fieldset class="form__fieldset">
           <legend class="form__legend">Комментарий</legend>
-          <input class="form__input" type="text" name="comment">
+          <textarea class="form__input" name="comment">Расскажите обо всех повадках кота</textarea>
         </fieldset>
-        <fieldset class="main-form__additional form form--primary">
+        <fieldset class="form__fieldset">
           <legend class="form__legend">Дополнительно</legend>
           <label class="form__label">
             <input class="form__input" type="checkbox" name="sweetener" checked>
@@ -97,8 +97,8 @@
             <span class="form__label-text">ВИТАМИНЫ</span>
           </label>
         </fieldset>
-        <button class="main-form__button button button_primary" type="submit">Отправить заявку</button>
-        <p class="main-form__footnote">* - Обязательное поле</p>
+        <button class="main-page__button button button_primary" type="submit">Отправить заявку</button>
+        <p class="main-page__footnote">* - Обязательное поле</p>
       </form>
     </div>
   </main>
@@ -113,11 +113,10 @@
             <p class="banner__adress">Санкт-Петербург</p>
           </div>
           <img class="footer-map__image" src="img/map/map.png" height="362" width="320" alt="Карта, показывающая место расположения магазина Кот Энерджи.">
-          <img class="footer-map__icon" src="img/map/map-icon.svg" height="52" width="56" alt="Указатель места на карте в виде логотипа Кот Энерджи"><!-- Вставить адрес иконки КотЭнерджи -->
         </div>
         <div class="contacts__communication communication">
           <a class="communication__link" href="index.html">
-            <img class="logo__text logo-text" src="img/logo-text.svg" height="18" width="101" alt="Логотип Кот Энерджи.">
+            <img class="communication__logo-text" src="img/logo-text.svg" height="18" width="101" alt="Логотип Кот Энерджи.">
           </a>
           <ul class="communication__list social">
             <li class="social__item">
