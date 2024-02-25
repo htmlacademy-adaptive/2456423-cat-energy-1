@@ -3,9 +3,36 @@
 }
 
 .programms__container {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 110px;
+    padding-right: 110px;
+    margin-bottom: 71px;
+  }
 }
 
 .programms__list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    gap: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }

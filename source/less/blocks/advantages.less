@@ -4,6 +4,15 @@
 
 .advantages__container {
   padding: 0 20px 49px 20px;
+
+  @media (min-width: 768px) {
+    padding: 0 30px 47px 30px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 110px 0 110px;
+    margin-bottom: 69px;
+  }
 }
 
 .advantages__title {
@@ -18,4 +27,16 @@
 
 .advantages__list {
   .list-reset();
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 245px 245px;
+    column-gap: 177px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
