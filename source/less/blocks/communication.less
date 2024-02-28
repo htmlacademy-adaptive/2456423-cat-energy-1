@@ -1,3 +1,27 @@
 .communication {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   padding: 20px 40px;
+  text-align: center;
+  background-color: #f2f2f2;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 30px;
+  }
+
+  @media (min-width: 1300px) {
+    padding: 66px 110px;
+  }
+}
+
+.communication__list {
+  margin: 0;
+}
+
+.communication__link-academy {
+  display: flex;
+  justify-content: space-between;
 }

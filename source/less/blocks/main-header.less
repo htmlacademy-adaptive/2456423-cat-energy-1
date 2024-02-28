@@ -1,6 +1,27 @@
 .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-position: top left;
-  padding: 13px 20px 15px;
+  padding-top: 13px;
+
+  @media (min-width: 768px) {
+    align-items: flex-end;
+    padding-top: 25px;
+  }
+
+  @media (min-width: 1300px) {
+    padding-top: 55px;
+  }
+}
+
+.main-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+
+  @media (min-width: 768px) {
+    gap: 13px;
+  }
 }
