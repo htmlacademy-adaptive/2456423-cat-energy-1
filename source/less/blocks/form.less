@@ -7,6 +7,7 @@
   margin: 0;
   margin-bottom: 24px;
   padding: 0;
+  position: relative;
   border: none;
   flex-direction: column;
   font-size: 16px;
@@ -23,6 +24,42 @@
     }
   }
 
+  &--programms {
+    @media (max-width: 767px) {
+      padding-top: 22px;
+
+      &::before,
+      &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 100vw;
+        height: 1px;
+        left: -20px;
+        background-color: #d9d9d9;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      padding-top: 23px;
+      padding-left: 27px;
+      border: 1px solid #e7e7e7;
+    }
+
+    @media (min-width: 1300px) {
+      padding-top: 25px;
+      padding-left: 28px;
+    }
+  }
+
   @media (min-width: 1300px) {
     flex-direction: row;
     gap: 80px;
@@ -33,19 +70,103 @@
   font-size: 24px;
   line-height: 26px;
   color: #000000;
+  position: relative;
+  background-color: #ffffff;
+  padding-left: 0;
+
+  @media (max-width: 767px) {
+    padding-right: 20px;
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 40px;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
 
   &--contacts {
-    padding-bottom: 35px;
+    @media (max-width: 767px) {
+      margin-bottom: 35px;
+      max-width: 187px;
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 76px;
+      max-width: 514px;
+    }
   }
 
   &--comment {
-    padding-bottom: 38px;
+    @media (max-width: 767px) {
+      margin-bottom: 38px;
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 87px;
+    }
+
+    @media (min-width: 1300px) {
+      margin-bottom: 78px;
+    }
   }
 
   &--additionally {
-    padding-bottom: 34px;
+    @media (max-width: 767px) {
+      margin-bottom: 34px;
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 57px;
+    }
+  }
+
+  &--contacts,
+  &--comment,
+  &--additionally {
+    @media (min-width: 768px) {
+      margin-left: -40px;
+      padding-left: 40px;
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 50%;
+      height: 2px;
+      background-color: #68b738;
+      z-index: -1;
+
+      @media (max-width: 767px) {
+        width: calc(100vw - 20px);
+        left: 0;
+      }
+
+      @media (min-width: 768px) {
+        width: 100vw;
+        left: -70px;
+      }
+
+      /*@media (min-width: 1300px) {
+        left: 0;
+      }*/
+    }
   }
 }
+
+&--contacts {
+  margin-bottom: 35px;
+}
+
+&--comment {
+  margin-bottom: 38px;
+}
+
+&--additionally {
+  margin-bottom: 34px;
+}
+
 
 .form__container {
   display: flex;

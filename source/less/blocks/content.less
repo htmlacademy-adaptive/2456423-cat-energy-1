@@ -1,4 +1,4 @@
-.content__container {
+.content-container {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -14,5 +14,17 @@
   @media (min-width: 1300px) {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  &--catalog {
+    @media (max-width: 767px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--footer {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

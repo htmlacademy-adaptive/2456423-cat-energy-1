@@ -1,5 +1,5 @@
 .main-page .main-page__container {
-  background-color: #ffffff;
+  background-color: transparent;
   padding-top: 27px;
   padding-bottom: 35px;
 
@@ -65,10 +65,19 @@
   margin: 0;
   margin-bottom: 39px;
 
+  @media (max-width: 767px) {
+    padding-right: 54px;
+  }
+
   @media (min-width: 768px) {
     margin-bottom: 66px;
+    padding-right: 345px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: 1300px) {
+    padding-right: 897px;
   }
 }
 

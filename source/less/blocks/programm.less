@@ -1,37 +1,127 @@
 .programm {
-  padding: 30px 33px 18px 20px;
-  background-color: #d9d9d9;
+  background-color: #f2f2f2;
   font-family: @font-family-secondary;
   font-weight: 400;
   color: #000000;
   box-sizing: border-box;
+  min-height: 266px;
+  background-repeat: no-repeat;
+
+  @media (max-width: 767px) {
+    padding: 30px 20px 18px 20px;
+
+    &--weight-loss {
+      background-image: url("../../img/programms/cat_weight-loss_mobile.png");
+      background-size: 50px 53px;
+      background-position: left 20px top 24px;
+    }
+
+    &--weight-increase {
+      background-image: url("../../img/programms/cat_weight-increase_mobile.png");
+      background-size: 67px 50px;
+      background-position: left 13px top 24px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 77px 0 53px 52px;
+    min-height: 372px;
+
+    &--weight-loss {
+      background-image: url("../../img/programms/cat_weight-loss_tablet.png");
+      background-size: 200px 211px;
+      background-position: right 63px top 81px;
+    }
+
+    &--weight-increase {
+      background-image: url("../../img/programms/cat_weight-increase_tablet.png");
+      background-size: 268px 200px;
+      background-position: right 29px top 81px;
+    }
+  }
 
   @media (min-width: 1300px) {
     width: 570px;
+    padding: 77px 0 53px 52px;
+
+    &--weight-loss {
+      background-image: url("../../img/programms/cat_weight-loss_desctop.png");
+      background-size: 100px 106px;
+      background-position: left 52px top 41px;
+    }
+
+    &--weight-increase {
+      background-image: url("../../img/programms/cat_weight-increase_desctop.png");
+      background-size: 134px 100px;
+      background-position: left 33px top 47px;
+    }
   }
 }
 
 .programm__title {
   margin: 0;
   margin-bottom: 29px;
+  margin-left: 70px;
   font-family: @font-family-secondary;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+    margin-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: 1300px) {
+    margin-bottom: 73px;
+    margin-left: 160px;
+  }
 }
 
 .programm__inner {
   margin: 0;
-  padding-bottom: 20px;
+  padding-right: 33px;
+  padding-bottom: 23px;
   font-family: @font-family-base;
   font-weight: 400;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: 768px) {
+    border-bottom: 0;
+    padding-right: 316px;
+    padding-bottom: 0;
+    margin-bottom: 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: 1330px) {
+    padding-right: 67px;
+    margin-bottom: 23px;
+  }
 }
 
 .programm__link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 4px 56px 4px 0;
   font-family: @font-family-secondary;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  background-image: url("../../img/programms/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px top 6px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+    background-position: right 6px top 14px;
+  }
 }

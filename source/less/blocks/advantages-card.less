@@ -1,9 +1,72 @@
 .advantages-card {
+  position: relative;
   font-weight: 400;
   color: #444444;
   box-sizing: border-box;
+  padding-left: 80px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  margin-bottom: 20px;
+  counter-increment: advantage-number;
+
+  @media (max-width: 767px) {
+    min-height: 60px;
+
+    &--product-composition {
+      background-image: url("../../img/advantages/product-composition.svg");
+    }
+
+    &--eating {
+      background-image: url("../../img/advantages/eating.svg");
+    }
+
+    &--meals-frequency {
+      background-image: url("../../img/advantages/meals-frequency.svg");
+    }
+
+    &--eating-result {
+      background-image: url("../../img/advantages/eating-result.svg");
+    }
+  }
 
   @media (min-width: 768px) {
-    min-height: 240px;
+    min-height: 280px;
+    background-size: 80px 80px;
+    background-position: left top 40px;
+    padding: 151px 26px 57px 0;
+
+    &::after {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      content: counter(advantage-number);
+      right: 0;
+      top: 0;
+      color: #f2f2f2;
+      font-family: @font-family-secondary;
+      font-size: 280px;
+      line-height: 280px;
+    }
+
+    &--product-composition {
+      background-image: url("../../img/advantages/product-composition-tablet.svg");
+    }
+
+    &--eating {
+      background-image: url("../../img/advantages/eating-tablet.svg");
+    }
+
+    &--meals-frequency {
+      background-image: url("../../img/advantages/meals-frequency-tablet.svg");
+    }
+
+    &--eating-result {
+      background-image: url("../../img/advantages/eating-result-tablet.svg");
+    }
+  }
+
+  &__inner {
+    margin: 0;
   }
 }
