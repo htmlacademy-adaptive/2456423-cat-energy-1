@@ -132,7 +132,7 @@ body {
 }
 .additional-products__advertising-text::before {
   position: absolute;
-  content: url("../../img/icon_gift.svg");
+  content: url("../img/icon-gift.svg");
 }
 @media (max-width: 767px) {
   .additional-products__advertising-text {
@@ -240,16 +240,16 @@ body {
     min-height: 60px;
   }
   .advantages-card--product-composition {
-    background-image: url("../../img/advantages/product-composition.svg");
+    background-image: url("../img/advantages/product-composition.svg");
   }
   .advantages-card--eating {
-    background-image: url("../../img/advantages/eating.svg");
+    background-image: url("../img/advantages/eating.svg");
   }
   .advantages-card--meals-frequency {
-    background-image: url("../../img/advantages/meals-frequency.svg");
+    background-image: url("../img/advantages/meals-frequency.svg");
   }
   .advantages-card--eating-result {
-    background-image: url("../../img/advantages/eating-result.svg");
+    background-image: url("../img/advantages/eating-result.svg");
   }
 }
 @media (min-width: 768px) {
@@ -272,16 +272,16 @@ body {
     line-height: 280px;
   }
   .advantages-card--product-composition {
-    background-image: url("../../img/advantages/product-composition-tablet.svg");
+    background-image: url("../img/advantages/product-composition-tablet.svg");
   }
   .advantages-card--eating {
-    background-image: url("../../img/advantages/eating-tablet.svg");
+    background-image: url("../img/advantages/eating-tablet.svg");
   }
   .advantages-card--meals-frequency {
-    background-image: url("../../img/advantages/meals-frequency-tablet.svg");
+    background-image: url("../img/advantages/meals-frequency-tablet.svg");
   }
   .advantages-card--eating-result {
-    background-image: url("../../img/advantages/eating-result-tablet.svg");
+    background-image: url("../img/advantages/eating-result-tablet.svg");
   }
 }
 .advantages-card__inner {
@@ -303,23 +303,34 @@ body {
   color: #444444;
 }
 .communication {
+  background-color: #f2f2f2;
+}
+.communication__link-academy-text {
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+}
+.communication__container {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 20px 40px;
+  padding: 20px 20px;
   text-align: center;
   background-color: #f2f2f2;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 @media (min-width: 768px) {
-  .communication {
+  .communication__container {
     flex-direction: row;
     justify-content: space-between;
     padding: 55px 30px;
   }
 }
 @media (min-width: 1300px) {
-  .communication {
-    padding: 66px 110px;
+  .communication__container {
+    padding: 66px 40px;
   }
 }
 .communication__list {
@@ -332,11 +343,6 @@ body {
   text-decoration: none;
   gap: 23px;
 }
-.communication__link-academy-text {
-  font-size: 16px;
-  line-height: 20px;
-  color: #444444;
-}
 .contacts {
   background-color: #ffffff;
 }
@@ -345,7 +351,6 @@ body {
 }
 .example {
   background-color: #eaeaea;
-  max-width: 1300px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -708,12 +713,28 @@ body {
 }
 .hero {
   background-color: #ffffff;
-}
-.hero .hero__container {
   background-image: url("../img/hero-background-cap.png"), url("../img/hero-background-cat.jpg");
   background-size: 280px 270px, 320px 302px;
   background-repeat: no-repeat;
   background-position: top 185px center, top center;
+}
+@media (min-width: 768px) {
+  .hero {
+    background-image: url("../img/hero-background-cap-tablet.png");
+    background-size: 709px 609px;
+    background-repeat: no-repeat;
+    background-position: top 210px center;
+  }
+}
+@media (min-width: 1300px) {
+  .hero {
+    background-image: url("../img/hero-background-cap-desctop.png"), url("../img/hero-background-cat-desctop.jpg");
+    background-size: 552px 499px, 720px 694px;
+    background-repeat: no-repeat;
+    background-position: top 157px left 554px, top right;
+  }
+}
+.hero .hero__container {
   padding: 27px 35px 20px 36px;
   min-height: 480px;
   font-family: "Oswald", Tahoma, sans-serif;
@@ -729,10 +750,6 @@ body {
     min-height: 875px;
     color: #000000;
     text-align: left;
-    background-image: url("../img/hero-background-cap-tablet.png");
-    background-size: 709px 609px;
-    background-repeat: no-repeat;
-    background-position: top 210px center;
   }
 }
 @media (min-width: 1300px) {
@@ -740,10 +757,6 @@ body {
     padding: 224px 726px 184px 190px;
     margin-top: -177px;
     min-height: 814px;
-    background-image: url("../img/hero-background-cap-desctop.png"), url("../img/hero-background-cat-desctop.jpg");
-    background-size: 552px 499px, 720px 694px;
-    background-repeat: no-repeat;
-    background-position: top 157px left 554px, top right;
   }
 }
 .hero__title {
@@ -1000,6 +1013,11 @@ body {
     color: #ffffff;
   }
 }
+@media (min-width: 1670px) {
+  .main-nav__link--color-light {
+    color: #000000;
+  }
+}
 @media (min-width: 768px) {
   .main-nav__item--current .main-nav__link::after {
     position: absolute;
@@ -1033,6 +1051,11 @@ body {
   line-height: 36px;
   font-weight: 400;
   color: #000000;
+}
+@media (max-width: 767px) {
+  .main-page__title--catalog {
+    margin-left: 20px;
+  }
 }
 .main-page__title--form {
   margin-bottom: 37px;
@@ -1383,17 +1406,21 @@ body {
   min-height: 266px;
   background-repeat: no-repeat;
 }
+.programm--weight-loss {
+  background-image: url("../img/programms/cat-weight-loss.svg");
+}
+.programm--weight-increase {
+  background-image: url("../img/programms/cat-weight-increase.svg");
+}
 @media (max-width: 767px) {
   .programm {
     padding: 30px 20px 18px 20px;
   }
   .programm--weight-loss {
-    background-image: url("../../img/programms/cat_weight-loss_mobile.png");
     background-size: 50px 53px;
     background-position: left 20px top 24px;
   }
   .programm--weight-increase {
-    background-image: url("../../img/programms/cat_weight-increase_mobile.png");
     background-size: 67px 50px;
     background-position: left 13px top 24px;
   }
@@ -1404,12 +1431,10 @@ body {
     min-height: 372px;
   }
   .programm--weight-loss {
-    background-image: url("../../img/programms/cat_weight-loss_tablet.png");
     background-size: 200px 211px;
     background-position: right 63px top 81px;
   }
   .programm--weight-increase {
-    background-image: url("../../img/programms/cat_weight-increase_tablet.png");
     background-size: 268px 200px;
     background-position: right 29px top 81px;
   }
@@ -1420,12 +1445,10 @@ body {
     padding: 77px 0 53px 52px;
   }
   .programm--weight-loss {
-    background-image: url("../../img/programms/cat_weight-loss_desctop.png");
     background-size: 100px 106px;
     background-position: left 52px top 41px;
   }
   .programm--weight-increase {
-    background-image: url("../../img/programms/cat_weight-increase_desctop.png");
     background-size: 134px 100px;
     background-position: left 33px top 47px;
   }
@@ -1489,7 +1512,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-  background-image: url("../../img/programms/arrow.svg");
+  background-image: url("../img/programms/arrow.svg");
   background-repeat: no-repeat;
   background-position: right 17px top 6px;
 }
@@ -1741,5 +1764,6 @@ body {
 .content-container--footer {
   padding-left: 0;
   padding-right: 0;
+  max-width: none;
 }
 /*# sourceMappingURL=style.css.map */
