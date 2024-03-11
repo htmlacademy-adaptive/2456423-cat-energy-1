@@ -1,12 +1,27 @@
 .hero {
   background-color: #ffffff;
-}
-
-.hero .hero__container {
   background-image: url("../img/hero-background-cap.png"), url("../img/hero-background-cat.jpg");
   background-size: 280px 270px, 320px 302px;
   background-repeat: no-repeat;
   background-position: top 185px center, top center;
+
+  @media (min-width: 768px) {
+    background-image: url("../img/hero-background-cap-tablet.png");
+    background-size: 709px 609px;
+    background-repeat: no-repeat;
+    background-position: top 210px center;
+  }
+
+  @media (min-width: 1300px) {
+    background-image: url("../img/hero-background-cap-desctop.png"), url("../img/hero-background-cat-desctop.jpg");
+    background-size: 552px 499px, 720px 694px;
+    background-repeat: no-repeat;
+    background-position: top 157px left 554px, top right;
+  }
+}
+
+.hero .hero__container {
+
   padding: 27px 35px 20px 36px;
   min-height: 480px;
   font-family: @font-family-secondary;
@@ -21,20 +36,12 @@
     min-height: 875px;
     color: #000000;
     text-align: left;
-    background-image: url("../img/hero-background-cap-tablet.png");
-    background-size: 709px 609px;
-    background-repeat: no-repeat;
-    background-position: top 210px center;
   }
 
   @media (min-width: 1300px) {
     padding: 224px 726px 184px 190px;
     margin-top: -177px;
     min-height: 814px;
-    background-image: url("../img/hero-background-cap-desctop.png"), url("../img/hero-background-cat-desctop.jpg");
-    background-size: 552px 499px, 720px 694px;
-    background-repeat: no-repeat;
-    background-position: top 157px left 554px, top right;
   }
 }
 

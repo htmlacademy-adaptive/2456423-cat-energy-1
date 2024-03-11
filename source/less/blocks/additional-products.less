@@ -4,6 +4,8 @@
 }
 
 .additional-products__title {
+  display: inline-block;
+  position: relative;
   margin-top: 0;
   margin-bottom: 36px;
   font-family: @font-family-secondary;
@@ -12,10 +14,55 @@
   font-weight: 400;
   color: #000000;
 
+  & span {
+    position: relative;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    content: "";
+    background-color: #68b738;
+    height: 2px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 36px;
+
+    & span {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &::after {
+      left: -20px;
+      width: 100vw;
+    }
+  }
+
   @media (min-width: 768px) {
-    margin-bottom: 80px;
     font-size: 36px;
     line-height: 36px;
+
+    & span {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &::after {
+      left: -30px;
+      width: 100vw;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    &::after {
+      left: -40px;
+      width: 1300px;
+    }
   }
 }
 
@@ -23,21 +70,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 80px;
+  gap: 35px;
 
   @media (min-width: 1300px) {
     flex-direction: row;
+    gap: 80px;
   }
 }
 
 .additional-products__advertising-text {
+  display: block;
   margin: 0;
+  position: relative;
   background-image: url("../img/background-catalog-advertise.jpg");
   background-color: #68b738;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 187px 61px 43px 58px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -46,15 +95,39 @@
   min-height: 290px;
   box-sizing: border-box;
 
+  &::before {
+    position: absolute;
+    content: url("../img/icon-gift.svg");
+  }
+
+  @media (max-width: 767px) {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 187px 61px 43px 58px;
+
+    &::before {
+      top: 59px;
+      left: 101px;
+      right: 101px;
+    }
+  }
+
   @media (min-width: 768px) {
     background-image: url("../img/background-catalog-advertise-tablet.jpg");
     min-height: 200px;
+    padding: 71px 125px 69px 421px;
+
+    &::before {
+      top: 57px;
+      left: 77px;
+    }
   }
 
   @media (min-width: 1300px) {
     background-image: url("../img/background-catalog-advertise-desctop.jpg");
     min-height: 288px;
     width: 245px;
+    padding: 185px 42px 43px;
   }
 }
 
