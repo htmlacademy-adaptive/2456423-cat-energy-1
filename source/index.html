@@ -6,13 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="page__header main-header content-container">
     <a class="main-header__logo logo">
-      <img class="logo__image logo-image" src="img/logo-mobile.svg" height="38" width="33" alt="Надпись Кот Энерджи.">
-      <img class="logo__text logo-text" src="img/logo-text.svg" height="18" width="101" alt="Логотип Кот Энерджи.">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/main-logo/logo-desctop.svg" height="59" width="70">
+        <source media="(min-width: 768px)" srcset="img/main-logo/logo-tablet.svg" height="50" width="60">
+        <img class="logo__image logo-image" src="img/main-logo/logo-mobile.svg" height="38" width="33"
+          alt="Надпись Кот Энерджи.">
+      </picture>
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/main-logo/logo-text-desctop.svg">
+        <img class="logo__text logo-text" src="img/main-logo/logo-text.svg" height="18" width="101"
+          alt="Логотип Кот Энерджи.">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
@@ -96,10 +109,16 @@
         </div>
         <div class="example__slider">
           <div class="example__image example__image--fat-cat" style="width: 50%">
-            <img src="img/cat/fat-cat.png" height="280" width="256" alt="Толстый кот.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat/fat-cat-tablet.png 1x, img/cat/fat-cat-tablet@2x.png 2x">
+              <img src="img/cat/fat-cat.png" srcset="img/cat/fat-cat@2x.png 2x" height="280" width="256" alt="Толстый кот.">
+            </picture>
           </div>
           <div class="example__image example__image--thin-cat" style="width: 280px">
-            <img src="img/cat/thin-cat.png" height="280" width="256" alt="Худой кот.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat/thin-cat-tablet.png 1x, img/cat/thin-cat-tablet@2x.png 2x">
+              <img src="img/cat/thin-cat.png" srcset="img/cat/thin-cat@2x.png 2x" height="280" width="256" alt="Толстый кот.">
+            </picture>
           </div>
           <div class="example__slider-control" style="left: 40px">
             <button class="example__slider-button" type="button">
@@ -128,8 +147,7 @@
         <div class="contacts__communication communication">
           <div class="communication__container">
             <a class="communication__link">
-              <img class="communication__logo-text" src="img/logo-text.svg" height="18" width="101"
-                alt="Логотип Кот Энерджи.">
+              <img class="communication__logo-text" src="img/main-logo/logo-text.svg" height="18" width="101" alt="Логотип Кот Энерджи.">
             </a>
             <ul class="communication__list social">
               <li class="social__item">
