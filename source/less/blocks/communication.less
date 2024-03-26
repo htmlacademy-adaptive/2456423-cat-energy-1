@@ -34,10 +34,30 @@
   margin: 0;
 }
 
+.communication__link:hover {
+  opacity: 0.8;
+}
+
+.communication__link:active {
+  opacity: 0.6;
+}
+
 .communication__link-academy {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
   gap: 23px;
+}
+
+.communication__link-academy-icon {
+  fill: #666666;
+}
+
+.communication__link-academy:hover .communication__link-academy-icon {
+  fill: #68b738;
+}
+
+.communication__link-academy:active {
+  opacity: 0.3;
 }
