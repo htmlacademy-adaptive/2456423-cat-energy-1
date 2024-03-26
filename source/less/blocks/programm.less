@@ -110,6 +110,7 @@
   display: inline-block;
   margin-top: 15px;
   padding: 4px 56px 4px 0;
+  position: relative;
   font-family: @font-family-secondary;
   font-size: 16px;
   line-height: 16px;
@@ -117,13 +118,31 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-  background-image: url("../img/programms/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: right 17px top 6px;
+
+  &::after {
+    content: "";
+    mask-image: url("../img/sprite.svg#programm-arrow");
+    height: 12px;
+    width: 24px;
+    mask-repeat: no-repeat;
+    background-color: #000000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+  }
+
+  &:hover::after {
+    height: 12px;
+    width: 32px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
-    background-position: right 6px top 14px;
   }
 }
