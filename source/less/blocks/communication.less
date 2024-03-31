@@ -43,21 +43,38 @@
 }
 
 .communication__link-academy {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   text-decoration: none;
-  gap: 23px;
-}
+  position: relative;
 
-.communication__link-academy-icon {
-  fill: #666666;
-}
+  @media (max-width: 767px) {
+    padding: 7px 167px 7px 0;
+    align-self: center;
+  }
 
-.communication__link-academy:hover .communication__link-academy-icon {
-  fill: #68b738;
+  @media (min-width: 768px) {
+    padding: 9px 50px 9px 5px;
+  }
 }
 
 .communication__link-academy:active {
   opacity: 0.3;
+}
+
+.communication__link-academy::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  content: "";
+  height: 34px;
+  width: 27px;
+  mask-image: url("../img/sprite.svg#communication-academy-icon");
+  mask-repeat: no-repeat;
+  background-color: #666666;
+}
+
+.communication__link-academy:hover.communication__link-academy::after {
+  background-color: #68b738;
 }
