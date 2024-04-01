@@ -316,6 +316,9 @@ body {
 .button--primary:hover {
   background-color: #5eaa2f;
 }
+.button--primary:active {
+  color: rgba(255, 255, 255, 0.3);
+}
 .button--secondary {
   background-color: #f2f2f2;
   color: #444444;
@@ -323,9 +326,6 @@ body {
 .button--secondary:hover,
 .button--secondary:active {
   background-color: #ebebeb;
-}
-.button--primary:active .button__inner {
-  opacity: 0.3;
 }
 .communication {
   background-color: #f2f2f2;
@@ -368,20 +368,41 @@ body {
   opacity: 0.6;
 }
 .communication__link-academy {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   text-decoration: none;
-  gap: 23px;
+  position: relative;
 }
-.communication__link-academy-icon {
-  fill: #666666;
+@media (max-width: 767px) {
+  .communication__link-academy {
+    padding: 7px 167px 7px 0;
+    align-self: center;
+  }
 }
-.communication__link-academy:hover .communication__link-academy-icon {
-  fill: #68b738;
+@media (min-width: 768px) {
+  .communication__link-academy {
+    padding: 9px 50px 9px 5px;
+  }
 }
 .communication__link-academy:active {
   opacity: 0.3;
+}
+.communication__link-academy::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  content: "";
+  height: 34px;
+  width: 27px;
+  -webkit-mask-image: url("../img/sprite.svg#communication-academy-icon");
+          mask-image: url("../img/sprite.svg#communication-academy-icon");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background-color: #666666;
+}
+.communication__link-academy:hover.communication__link-academy::after {
+  background-color: #68b738;
 }
 .contacts {
   background-color: #ffffff;
