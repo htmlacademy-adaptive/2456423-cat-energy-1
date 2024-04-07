@@ -100,8 +100,14 @@
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
             без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <p class="example__number"><span class="example__number-highlight">5 КГ<br></span> снижение веса</p>
-          <p class="example__number"><span class="example__number-highlight">60 ДНЕЙ<br></span> затрачено времени</p>
+          <div class="example__number-container">
+            <p class="example__number example__number--mass"><span class="example__number-highlight">5 КГ<br></span>
+              снижение веса</p>
+          </div>
+          <div class="example__number-container">
+            <p class="example__number example__number--time"><span class="example__number-highlight">60 ДНЕЙ<br></span>
+              затрачено времени</p>
+          </div>
           <div class="example__expenses-container">
             <span class="example__expenses">ЗАТРАТЫ НА ПИТАНИЕ</span>
             <span class="example__expenses">15 000РУБ.</span>
@@ -147,8 +153,14 @@
               <p class="banner__adress">Санкт-Петербург</p>
             </div>
           </div>
-          <img class="footer-map__image" src="img/map/map.png" height="362" width="320"
-            alt="Карта, показывающая место расположения магазина Кот Энерджи.">
+          <div class="footer-map__container">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/map/map-desctop.png 1x, img/map/map-desctop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet.png 1x, img/map/map-tablet@2x.png 2x">
+              <img class="footer-map__image" src="img/map/map.png" srcset="img/map/map@2x.png 2x"
+                alt="Карта, показывающая место расположения магазина Кот Энерджи.">
+            </picture>
+          </div>
         </div>
         <div class="contacts__communication communication">
           <div class="communication__container">

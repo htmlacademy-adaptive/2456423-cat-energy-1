@@ -7,14 +7,12 @@
   box-sizing: border-box;
 
   @media (min-width: 768px) {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding: 60px 70px;
     min-height: 200px;
   }
 
   @media (min-width: 1300px) {
-    padding-left: 80px;
-    padding-right: 78px;
+    padding: 60px 78px 60px 80px;
     width: 565px;
   }
 
@@ -35,13 +33,20 @@
   font-weight: 400;
   color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .banner__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    gap: 20px;
+  }
 }
 
 .banner__adress {
@@ -50,4 +55,19 @@
   line-height: 20px;
   font-weight: 400;
   color: #444444;
+
+  @media (max-width: 767px) {
+    text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 20px;
+  }
+
+  @media (min-width: 1300px) {
+    text-align: left;
+  }
 }
