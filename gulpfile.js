@@ -4,6 +4,7 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
 import autoprefixer from 'autoprefixer';
+import rename from 'gulp-rename';
 import browser from 'browser-sync';
 
 // Styles
