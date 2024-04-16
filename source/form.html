@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -15,17 +15,21 @@
 <body class="page__body">
   <header class="page__header main-header content-container">
     <a class="main-header__logo logo">
-      <picture>
-        <source media="(min-width: 1300px)" srcset="img/main-logo/logo-desctop.svg" height="59" width="70">
-        <source media="(min-width: 768px)" srcset="img/main-logo/logo-tablet.svg" height="50" width="60">
-        <img class="logo__image logo-image" src="img/main-logo/logo-mobile.svg" height="38" width="33"
-          alt="Надпись Кот Энерджи.">
-      </picture>
-      <picture>
-        <source media="(min-width: 1300px)" srcset="img/main-logo/logo-text-desctop.svg">
-        <img class="logo__text logo-text" src="img/main-logo/logo-text.svg" height="18" width="101"
-          alt="Логотип Кот Энерджи.">
-      </picture>
+      <svg class="logo__mobile" height="38" width="33" viewBox="0 0 33 38">
+        <use href="img/sprite-inline.svg#logo-mobile"></use>
+      </svg>
+      <svg class="logo__tablet" height="50" width="60" viewBox="0 0 60 50">
+        <use href="img/sprite-inline.svg#logo-tablet"></use>
+      </svg>
+      <svg class="logo__desctop" height="70" width="59" viewBox="0 0 70 59">
+        <use href="img/sprite-inline.svg#logo-desctop"></use>
+      </svg>
+      <svg class="logo__text" height="18" width="101" viewBox="0 0 101 18">
+        <use href="img/sprite-inline.svg#logo-text"></use>
+      </svg>
+      <svg class="logo__text-desctop" height="21" width="118" viewBox="0 0 118 21">
+        <use href="img/sprite-inline.svg#logo-text-desctop"></use>
+      </svg>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
@@ -166,6 +170,9 @@
           </div>
           <div class="footer-map__container">
             <picture>
+			  <source media="(min-width: 1300px)" srcset="img/map/map-desctop.webp 1x, img/map/map-desctop@2x.webp 2x">
+			  <source media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+			  <source srcset="img/map/map.webp 1x, img/map/map@2x.webp 2x">
               <source media="(min-width: 1300px)" srcset="img/map/map-desctop.png 1x, img/map/map-desctop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/map/map-tablet.png 1x, img/map/map-tablet@2x.png 2x">
               <img class="footer-map__image" src="img/map/map.png" srcset="img/map/map@2x.png 2x" alt="Карта, показывающая место расположения магазина Кот Энерджи.">
@@ -174,9 +181,13 @@
         </div>
         <div class="contacts__communication communication">
           <div class="communication__container">
-            <a class="communication__link">
-              <img class="communication__logo-text" src="img/main-logo/logo-text.svg" height="18" width="101"
-                alt="Логотип Кот Энерджи.">
+            <a class="communication__link logo">
+              <svg class="logo__text" height="18" width="101" viewBox="0 0 101 18">
+                <use href="img/sprite-inline.svg#logo-text"></use>
+              </svg>
+              <svg class="logo__text-desctop" height="21" width="118" viewBox="0 0 118 21">
+                <use href="img/sprite-inline.svg#logo-text-desctop"></use>
+              </svg>
             </a>
             <ul class="communication__list social">
               <li class="social__item">

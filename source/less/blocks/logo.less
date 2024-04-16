@@ -1,10 +1,50 @@
 //logo.less//
-.logo:hover .logo__image,
-.logo:hover .logo__text {
+.logo:hover .logo__mobile,
+.logo:hover .logo__tablet,
+.logo:hover .logo__desctop,
+.logo:hover .logo__text,
+.logo:hover .logo__text-desctop {
   opacity: 0.8;
 }
 
-.logo:active .logo__image,
-.logo:active .logo__text {
+.logo:active .logo__mobile,
+.logo:active .logo__tablet,
+.logo:active .logo__desctop,
+.logo:active .logo__text,
+.logo:active .logo__text-desctop {
   opacity: 0.6;
+}
+
+.logo__mobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.logo__tablet {
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 1300px) {
+    display: none;
+  }
+}
+
+.logo__desctop {
+  @media (max-width: 1299px) {
+    display: none;
+  }
+}
+
+.logo__text {
+  @media (min-width: 1300px) {
+    display: none;
+  }
+}
+
+.logo__text-desctop {
+  @media (max-width: 1299px) {
+    display: none;
+  }
 }
