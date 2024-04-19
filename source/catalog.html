@@ -15,21 +15,15 @@
 <body class="page__body">
   <header class="page__header main-header content-container">
     <a class="main-header__logo logo">
-      <svg class="logo__mobile" height="38" width="33" viewBox="0 0 33 38">
-        <use href="img/sprite-inline.svg#logo-mobile"></use>
-      </svg>
-      <svg class="logo__tablet" height="50" width="60" viewBox="0 0 60 50">
-        <use href="img/sprite-inline.svg#logo-tablet"></use>
-      </svg>
-      <svg class="logo__desctop" height="70" width="59" viewBox="0 0 70 59">
-        <use href="img/sprite-inline.svg#logo-desctop"></use>
-      </svg>
-      <svg class="logo__text" height="18" width="101" viewBox="0 0 101 18">
-        <use href="img/sprite-inline.svg#logo-text"></use>
-      </svg>
-      <svg class="logo__text-desctop" height="21" width="118" viewBox="0 0 118 21">
-        <use href="img/sprite-inline.svg#logo-text-desctop"></use>
-      </svg>
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/main-logo/logo-desctop.svg" height="59" width="70">
+        <source media="(min-width: 768px)" srcset="img/main-logo/logo-tablet.svg" height="50" width="60">
+        <img class="logo-mobile" src="img/main-logo/logo-mobile.svg" height="38" width="33" alt="Логотип Кэт Энерджи">
+      </picture>
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/main-logo/logo-text-desctop.svg" height="21" width="118">
+        <img class="logo__text" src="img/main-logo/logo-text.svg" height="18" width="101" alt="Кэт Энерджи">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
@@ -55,7 +49,7 @@
         <li class="main-page__item product-card">
           <div class="product-card__container">
             <a class="product-card__link">
-              <picture>			    
+              <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energipro-500-chicken-tablet.webp 1x, img/catalog/cat-energipro-500-chicken-tablet@2x.webp 2x" width="161" height="172">
                 <source type="image/webp" srcset="img/catalog/cat-energipro-500-chicken.webp 1x, img/catalog/cat-energipro-500-chicken@2x.webp 2x" width="68" height="87">
                 <source media="(min-width: 768px)" srcset="img/catalog/cat-energipro-500-chicken-tablet.png 1x, img/catalog/cat-energipro-500-chicken-tablet@2x.png 2x" width="161" height="172">
@@ -105,7 +99,7 @@
         <li class="main-page__item product-card">
           <div class="product-card__container">
             <a class="product-card__link">
-              <picture>			   
+              <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energipro-500-fish-tablet.webp 1x, img/catalog/cat-energipro-500-fish-tablet@2x.webp 2x" width="161" height="172">
                 <source type="image/webp" srcset="img/catalog/cat-energipro-500-fish.webp 1x, img/catalog/cat-energipro-500-fish@2x.webp 2x" width="68" height="87">
                 <source media="(min-width: 768px)" srcset="img/catalog/cat-energipro-500-fish-tablet.png 1x, img/catalog/cat-energipro-500-fish-tablet@2x.png 2x" width="163" height="174">
@@ -300,12 +294,10 @@
         <div class="contacts__communication communication">
           <div class="communication__container">
             <a class="communication__link logo">
-              <svg class="logo__text" height="18" width="101" viewBox="0 0 101 18">
-                <use href="img/sprite-inline.svg#logo-text"></use>
-              </svg>
-              <svg class="logo__text-desctop" height="21" width="118" viewBox="0 0 118 21">
-                <use href="img/sprite-inline.svg#logo-text-desctop"></use>
-              </svg>
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/main-logo/logo-text-desctop.svg" height="21" width="118">
+                <img class="logo__text" src="img/main-logo/logo-text.svg" height="18" width="101" alt="Кэт Энерджи">
+              </picture>
             </a>
             <ul class="communication__list social">
               <li class="social__item">

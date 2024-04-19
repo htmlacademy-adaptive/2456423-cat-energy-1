@@ -7,7 +7,6 @@ import autoprefixer from 'autoprefixer';
 import rename from 'gulp-rename';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
 
@@ -50,7 +49,7 @@ export const createWebP = () => {
 
 //Svg
 export const svg = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/main-logo/*.svg'])
+  return gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'))
 }
@@ -116,8 +115,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     createWebP,
-    svg,
-    sprite
+    svg
   ),
 );
 
@@ -130,8 +128,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     createWebP,
-    svg,
-    sprite
+    svg
   ),
   gulp.series(
     server,
