@@ -16,21 +16,15 @@
 <body class="page__body">
   <header class="page__header main-header content-container">
     <a class="main-header__logo logo">
-      <svg class="logo__mobile" height="38" width="33" viewBox="0 0 33 38">
-        <use href="img/sprite-inline.svg#logo-mobile"></use>
-      </svg>
-      <svg class="logo__tablet" height="50" width="60" viewBox="0 0 60 50">
-        <use href="img/sprite-inline.svg#logo-tablet"></use>
-      </svg>
-      <svg class="logo__desctop" height="70" width="59" viewBox="0 0 70 59">
-        <use href="img/sprite-inline.svg#logo-desctop"></use>
-      </svg>
-      <svg class="logo__text" height="18" width="101" viewBox="0 0 101 18">
-        <use href="img/sprite-inline.svg#logo-text"></use>
-      </svg>
-      <svg class="logo__text-desctop" height="21" width="118" viewBox="0 0 118 21">
-        <use href="img/sprite-inline.svg#logo-text-desctop"></use>
-      </svg>
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/main-logo/logo-desctop.svg" height="59" width="70">
+        <source media="(min-width: 768px)" srcset="img/main-logo/logo-tablet.svg" height="50" width="60">
+        <img class="logo-mobile" src="img/main-logo/logo-mobile.svg" height="38" width="33" alt="Логотип Кэт Энерджи">
+      </picture>
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/main-logo/logo-text-desctop.svg" height="21" width="118">
+        <img class="logo__text" src="img/main-logo/logo-text.svg" height="18" width="101" alt="Кэт Энерджи">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
@@ -183,12 +177,10 @@
         <div class="contacts__communication communication">
           <div class="communication__container">
             <a class="communication__link logo">
-              <svg class="logo__text" height="18" width="101" viewBox="0 0 101 18">
-                <use href="img/sprite-inline.svg#logo-text"></use>
-              </svg>
-              <svg class="logo__text-desctop" height="21" width="118" viewBox="0 0 118 21">
-                <use href="img/sprite-inline.svg#logo-text-desctop"></use>
-              </svg>
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/main-logo/logo-text-desctop.svg" height="21" width="118">
+                <img class="logo__text" src="img/main-logo/logo-text.svg" height="18" width="101" alt="Кэт Энерджи">
+              </picture>
             </a>
             <ul class="communication__list social">
               <li class="social__item">
