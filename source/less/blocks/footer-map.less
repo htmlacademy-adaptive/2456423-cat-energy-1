@@ -2,15 +2,35 @@
   text-align: center;
 }
 
+.footer-map__container {
+  @media (max-width: 767px) {
+    height: 362px;
+  }
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+}
+
+.footer-map__container picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
 .footer-map__image {
-  display: block;
-  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .footer-map__banner {
+  background-color: #f2f2f2;
+
   @media (min-width: 1300px) {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 95px;
+    left: 110px;
+    background-color: #ffffff;
   }
 }

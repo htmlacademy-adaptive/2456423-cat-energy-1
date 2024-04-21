@@ -2,7 +2,12 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
+import csso from 'postcss-csso';
 import autoprefixer from 'autoprefixer';
+import rename from 'gulp-rename';
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
+import del from 'del';
 import browser from 'browser-sync';
 
 // Styles
@@ -12,10 +17,73 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+//Images
+
+export const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
+}
+
+export const copyImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(gulp.dest('build/img'))
+}
+
+//WebP
+export const createWebP = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'))
+}
+
+//Svg
+export const svg = () => {
+  return gulp.src('source/img/**/*.svg')
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'))
+}
+
+export const sprite = () => {
+  return gulp.src('source/img/main-logo/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite-inline.svg'))
+    .pipe(gulp.dest('build/img'))
+}
+
+//Copy
+
+export const copy = (done) => {
+  return gulp.src(['source/*.html',
+    'source/*.webmanifest',
+    'source/**/*.{woff2,woff}',
+    'source/*.ico',
+    'source/js/*.js',
+    'source/img/sprite.svg'
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
+}
+
+//Clean
+
+export const clean = () => {
+  return del('build');
 }
 
 // Server
@@ -23,7 +91,7 @@ export const styles = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -39,7 +107,30 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
+//Build
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    createWebP,
+    svg
+  ),
+);
+
+//Default
 
 export default gulp.series(
-  styles, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    createWebP,
+    svg
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
