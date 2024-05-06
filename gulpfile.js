@@ -3,6 +3,8 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 import autoprefixer from 'autoprefixer';
 import rename from 'gulp-rename';
 import squoosh from 'gulp-libsquoosh';
@@ -23,6 +25,20 @@ export const styles = () => {
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+//HTML
+export const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'))
+}
+
+//Scripts
+export const scripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
 }
 
 //Images
@@ -100,11 +116,17 @@ const server = (done) => {
   done();
 }
 
-// Watcher
+//Reload
+const reload = (done) => {
+  browser.reload();
+  done();
+}
 
+// Watcher
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/*.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 //Build
@@ -114,6 +136,8 @@ export const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
+    html,
+    scripts,
     createWebP,
     svg
   ),
@@ -127,6 +151,8 @@ export default gulp.series(
   copyImages,
   gulp.parallel(
     styles,
+    html,
+    scripts,
     createWebP,
     svg
   ),
