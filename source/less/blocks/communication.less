@@ -9,6 +9,11 @@
     padding-top: 20px;
     padding-bottom: 15px;
     border-bottom: 1px solid #d9d9d9;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 4px;
   }
 }
 
@@ -19,29 +24,36 @@
 }
 
 .communication__container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   padding: 20px 20px;
-  text-align: center;
   background-color: #f2f2f2;
   max-width: 1300px;
   margin: 0 auto;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     padding: 54px 30px;
+    gap: 102px;
   }
 
   @media (min-width: 1300px) {
     padding: 66px 40px;
+    gap: 358px;
   }
 }
 
 .communication__list {
   margin: 0;
+
+  @media (min-width: 768px) {
+    margin-top: 2px;
+  }
+
+  @media (min-width: 1300px) {
+    margin-top: 0;
+  }
 }
 
 .communication__link:hover {

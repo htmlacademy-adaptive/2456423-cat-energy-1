@@ -5,6 +5,13 @@
   @media (min-width: 768px) {
     padding-top: 0;
   }
+
+  &--catalog {
+    @media (max-width: 767px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .main-page__title {
@@ -77,6 +84,11 @@
   }
 }
 
+.main-page__item {
+  position: relative;
+  justify-self: center;
+}
+
 .main-page__text {
   font-family: @font-family-secondary;
   font-size: 14px;
@@ -140,4 +152,13 @@
     font-size: 20px;
     line-height: 26px;
   }
+}
+
+.main-page__example {
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-page__hero {
+  position: relative;
 }

@@ -3,7 +3,7 @@
     display: none;
   }
   </style>
-  <svg id="social-vkontakte" viewBox="0 0 28 22" aria-hidden="true" focusable="false"><path d="M1 5.339c0-.855.515-1.316 1.545-1.383l3.97.025a.52.52 0 0 1 .533.377c.409
+  <svg id="social-vkontakte" viewBox="0 0 28 22" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M1 5.339c0-.855.515-1.316 1.545-1.383l3.97.025a.52.52 0 0 1 .533.377c.409
       1.257.866 2.343 1.372 3.257.506.913 1.168 1.965 1.985 3.156.071.15.187.226.346.226.125 0
       .223-.059.293-.176l.08-.277.027-4.35c0-.302-.075-.503-.226-.604-.151-.1-.431-.176-.84-.226-.32-.05-.48-.235-.48-.553 0-.067.01-.118.027-.151.373-1.09
       1.44-1.635 3.198-1.635L14.322 3c.675 0 1.234.16 1.678.478.444.318.666.821.666 1.509v5.708c.125.084.24.126.347.126.266 0 .497-.15.692-.453 1.954-2.582
@@ -22,32 +22,32 @@
       0-.08-.251l-3.864-4.552c-.302-.352-.453-.73-.453-1.131 0-.403.142-.788.427-1.157.23-.336.679-.893 1.345-1.673a37.63 37.63 0 0 0
       1.745-2.187c.498-.68.826-1.296.986-1.849l.08-.327a.371.371 0 0 1-.027-.163.574.574 0 0 0-.026-.189h-4.183c-.267.1-.48.252-.64.453l-.16.478c-.444 1.156-1.607
       2.942-3.49 5.356a1.892 1.892 0 0 1-1.305.503Z"/></svg>
-  <svg id="social-telegram" viewBox="0 0 20 18" aria-hidden="true" focusable="false">
+  <svg id="social-telegram" viewBox="0 0 20 18" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <path fill-rule="evenodd" clip-rule="evenodd" d="m19.5.2.2.6L17 16.5a.7.7 0 0 1-1 .5l-8-5.3a.7.7 0 0 1 0-1l2.5-3.2-4.3
       2.9h-.7L.4 7.8a.7.7 0 0 1 0-1.2L18.8 0c.2 0 .5 0 .7.2ZM2.3 7.3 6 9.1l7.5-5a.7.7 0 0 1 .9 1l-4.8 6 6.4 4.2 2.3-13.6L2.3 7.3Z"/>
   </svg>
-  <svg id="social-youtube" viewBox="0 0 24 19" aria-hidden="true" focusable="false">
+  <svg id="social-youtube" viewBox="0 0 24 19" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <path d="m15.9 8.8-5.3-3.5a.7.7 0 0 0-1 .5v7a.7.7 0 0 0 1 .6L16 9.9a.7.7 0 0 0 0-1.1Zm-5 2.8V7.1l3.4 2.2-3.4 2.3ZM23.4 3a2.4 2.4 0 0
       0-1.5-1.6C18.2 0 12.3 0 12 0c-.3 0-6.2 0-10 1.4A2.4 2.4 0 0 0 .7 3C.3 4.1 0 6 0 9.3s.3 5.3.6 6.3a2.4 2.4 0 0 0 1.5 1.7c3.7 1.4 9.6
       1.4 9.9 1.4.8 0 6.4 0 10-1.4a2.4 2.4 0 0 0 1.4-1.7c.3-1 .6-3 .6-6.3 0-3.2-.3-5.2-.6-6.3ZM22 15.3a1 1 0 0 1-.6.7C18 17.4 12 17.4 12
       17.4c0 0-6 0-9.5-1.4a1 1 0 0 1-.6-.7c-.3-1-.6-2.8-.6-6 0-3 .3-5 .6-6a1 1 0 0 1 .6-.7C6 1.3 12 1.3 12 1.3c0 0 6 0 9.5 1.3a1 1 0 0
       1 .6.8c.3 1 .6 2.8.6 6 0 3-.3 4.9-.6 6Z"/>
   </svg>
-  <svg id="communication-academy-icon" viewBox="0 0 27 34" aria-hidden="true" focusable="false">
+  <svg id="communication-academy-icon" viewBox="0 0 27 34" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64
       0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22
       15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8
       13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"/>
   </svg>
-  <svg id="programm-arrow" viewBox="0 0 24 12" preserveAspectRatio="xMinYMid slice" aria-hidden="true" focusable="false">
+  <svg id="programm-arrow" viewBox="0 0 24 12" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <path stroke="#000" stroke-width="2" d="M0 6h18"/>
     <path d="m24 6-6.75 5.196V.804L24 6Z"/>
   </svg>
-  <svg id="slider-control-icon" viewBox="0 0 24 18" aria-hidden="true" focusable="false"><path d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z"/></svg>
-  <svg id="form-email-icon" viewBox="0 0 18 14" fill="none" aria-hidden="true" focusable="false">
+  <svg id="slider-control-icon" viewBox="0 0 24 18"  aria-hidden="true" focusable="false"><path d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z"/></svg>
+  <svg id="form-email-icon" viewBox="0 0 18 14" preserveAspectRatio="none" fill="none" aria-hidden="true" focusable="false">
     <path d="M0.500336 5.5V13.5H17.5041V5.5M0.500336 0.5H17.5041V2.5L9.00223 8.5L0.500336 2.5V0.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
-  <svg id="form-phone-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+  <svg id="form-phone-icon" viewBox="0 0 15 16" preserveAspectRatio="none" fill="none" aria-hidden="true" focusable="false">
     <path d="M7.00224 8H15.5041M15.5041 8L13.0036 5.5M15.5041 8L13.0036 10.5M5.50191 0.5V5.5H2.50124V10.5H5.50191V15.5H3.00135C1.50102 15.5 0.500793 14.5 0.500793 13V3C0.500793 1.5 1.50102 0.5 3.00135 0.5H5.50191Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
   <svg id="additionally-form-mark" viewBox="0 0 19 15" fill="none">

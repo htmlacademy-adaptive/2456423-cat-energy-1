@@ -110,6 +110,7 @@ const server = (done) => {
       baseDir: 'build'
     },
     cors: true,
+    browser:'chrome',
     notify: false,
     ui: false,
   });
