@@ -4,10 +4,42 @@
   }
 
   @media (min-width: 768px) {
-    margin-bottom: 65px;
+    margin-bottom: 49px;
   }
 
   @media (min-width: 1300px) {
-    margin-bottom: 29px;
+    margin-bottom: 60px;
   }
+}
+
+.page__container-header {
+  position: relative;
+  z-index: 1;
+}
+
+.page__container-header::after {
+  @media (min-width: 1300px) {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 694px;
+    top: 0;
+    right: 0;
+    background-image: url("../img/hero-background-cat-desctop.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-background-cat-desctop@2x.jpg");
+    }
+  }
+}
+
+.page__header,
+.page__header-index {
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
 }

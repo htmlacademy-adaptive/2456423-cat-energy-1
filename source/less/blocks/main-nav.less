@@ -9,6 +9,8 @@
   @media (min-width: 768px) {
     font-size: 18px;
     line-height: 24px;
+    margin-top: 4px;
+    margin-right: 5px;
   }
 
   @media (min-width: 1300px) {
@@ -16,6 +18,8 @@
     font-size: 20px;
     line-height: 30px;
     background-color: transparent;
+    margin-top: 4px;
+    margin-right: 2px;
   }
 }
 
@@ -44,7 +48,7 @@
   height: 2px;
   width: 100%;
   background-color: #000000;
-  box-shadow: 0 7px 0 0 #000000, 0 14px 0 0 #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -94,6 +98,16 @@
 
   @media (min-width: 1300px) {
     max-width: 600px;
+  }
+
+  &--form {
+    @media (min-width: 768px) {
+      margin-right: -3px;
+    }
+
+    @media (min-width: 1300px) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -145,7 +159,7 @@
 
   @media (min-width: 768px) {
     padding-top: 0;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
   }
 
   &:hover {
@@ -160,22 +174,32 @@
     @media (min-width: 1300px) {
       color: #ffffff;
     }
-
-    @media (min-width: 1670px) {
-      color: #000000;
-    }
   }
+}
+
+.main-nav__link::after {
+  display: none;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 2px;
 }
 
 .main-nav__item--current .main-nav__link::after {
   @media (min-width: 768px) {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 100%;
-    width: 100%;
-    height: 2px;
+    display: block;
     background-color: #68b738;
+  }
+
+  @media (min-width: 1300px) {
+    background-color: #ffffff;
   }
 }
 
+.main-nav__item--current-secondary .main-nav__link::after {
+  @media (min-width: 1300px) {
+    background-color: #68b738;
+  }
+}
