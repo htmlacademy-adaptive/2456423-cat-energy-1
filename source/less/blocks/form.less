@@ -476,6 +476,7 @@
 
 .form__input:focus-visible {
   border: 2px solid #444444;
+  outline: none;
 
   @media (max-width: 767px) {
     padding-top: 12px;
@@ -518,8 +519,20 @@
   }
 }
 
-.form__input-error {
+.form__input--error {
   border: 2px solid #ff8282;
+
+  @media (max-width: 767px) {
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-left: 14px;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 19px;
+  }
 }
 
 .form__contacts-container {
@@ -627,6 +640,7 @@
 .form__input[type="radio"]:disabled + .form__input-programm-mark,
 .form__input[type="radio"]:disabled ~ .form__label-text {
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .form__input[type="radio"]:checked + .form__input-programm-mark {
@@ -729,6 +743,7 @@
 .form__input[type="checkbox"]:disabled + .form__input-additionally-mark,
 .form__input[type="checkbox"]:disabled ~ .form__label--additionally {
   opacity: 0.3;
+  pointer-events: none;
 }
 
 
